@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <meta charset="UTF-8">
+
+    <title>会议记录上传</title>
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.js"></script>
+
+</head>
+
+<script src="../static/jquery/jquery-2.1.1.min.js" th:src="@{/jquery/jquery-2.1.1.min.js}"></script>
+
+
+<body>
+
+<form id="form1" action="/file/upload1"  method="post" enctype="multipart/form-data">
+<!--    target="frame1"-->
+    <input type="file" name="file" id="file" accept=".xls,.xlsx,.csv"/>
+
+    <input type="button" value="上传" id="upload1"/>
+
+</form>
+
+<iframe name="frame1" frameborder="0" height="40"></iframe>
+
+<!-- 其实我们可以把iframe标签隐藏掉 -->
+
+<script type="text/javascript">
+    $(function () {
+        $("#upload1").click(function () {
+            var formData = new FormData();
+            formData.append("file", document.getElementById("file").files[0]);
+            $.ajax({
+                url: "/file/upload1",
+                type: "POST",
+                data: formData,
+
+                //必须false才会自动加上正确的Content-Type
+                contentType: false,
+
+                //必须false才会避开jquery对 formdata 的默认处理
+                //XMLHttpRequest会对 formdata 进行正确的处理
+                processData: false,
+
+                success: function (data) {
+                    if (data.status == "true") {
+                        alert("上传成功！");
+                        $.ajax({
+                            url:"/file/getpath",
+                            type:"POST",
+                            data:{"filepath":data.path},
+                        });
+
+
+                    }
+                    if (data.status=="false")
+                    {
+                        alert("上传失败，文件已存在！");
+                    }
+                    if (data.status == "error") {
+
+                        alert(data.msg);
+                    }
+                },
+                error: function () {
+                    alert("上传失败！");
+                }
+            });
+        });
+    });
+</script>
+
+
+</body>
+
+</html>
+
