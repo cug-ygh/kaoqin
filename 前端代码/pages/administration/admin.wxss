@@ -1,0 +1,31 @@
+/* pages/administration/admin.wxss */
+
+.tui-picker-name{
+  font-size: 18px;
+  color: rgb(54, 85, 221);
+}
+
+.updown{
+  margin-top: 20px;
+}
+
+.btn1{
+  margin-top: 10px;
+}
+
+.btn2{
+  margin-top: 40px;
+  background-color: rgb(102, 228, 169);
+}
+
+.btn3{
+  margin-top: 10px;
+}
+
+.checkbox{
+  display:inline-block;
+  margin:10px;
+  padding:6px;
+  background:#eee;
+  border-radius: 4px;
+}

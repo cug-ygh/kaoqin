@@ -1,0 +1,11 @@
+/* pages/Statistics/Statistics.wxss */
+
+.title{
+  font-size: 20px;
+  color: rgb(39, 70, 172);
+}
+
+.th{
+  margin-top: 10px;
+  font-size: 15px;
+}

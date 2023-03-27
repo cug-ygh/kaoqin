@@ -1,0 +1,36 @@
+<!--pages/administration/admin.wxml-->
+<checkbox-group bindchange="if_select">
+<view class='check-box'>
+<checkbox value="是否自定义时间" />自定义时间
+</view>
+</checkbox-group>
+
+<view class="tui-picker-content">
+  <view class="tui-picker-name">会议开始时间</view>
+  <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+    <view class="tui-picker-detail">
+      选择日期时间: {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}
+    </view>
+  </picker>
+</view>
+
+<view class="tui-picker-content">
+  <view class="tui-picker-name">会议结束时间</view>
+  <picker mode="multiSelector" value="{{dateTime1}}" bindchange="changeDateTime1" bindcolumnchange="changeDateTimeColumn1" range="{{dateTimeArray1}}">
+    <view class="tui-picker-detail">
+      选择日期时间: {{dateTimeArray1[0][dateTime1[0]]}}-{{dateTimeArray1[1][dateTime1[1]]}}-{{dateTimeArray1[2][dateTime1[2]]}} {{dateTimeArray1[3][dateTime1[3]]}}:{{dateTimeArray1[4][dateTime1[4]]}}
+    </view>
+  </picker>
+</view>
+
+<!-- <view class="updown">
+  <button bindtap="upfile">上传会议记录</button>
+</view> -->
+<!--pages/web/web.wxml-->
+<button bindtap="gotopage">上传会议记录</button>
+<button class="btn1" bindtap="result">查看考勤结果</button>
+<button class="btn3" bindtap="tongji">查看统计信息</button>
+<button class="btn2" bindtap="bujia">查看考勤补假信息</button>
+
+
+

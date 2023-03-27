@@ -1,0 +1,20 @@
+<!--pages/bujia_info/bujia_info.wxml-->
+<text class="bujia_text">以下是申请补假信息</text>
+<view class="container">
+    <view class="table">
+        <view class="tr">
+            <view class="th">考勤号</view>
+            <view class="th">姓名</view>
+            <view class="th">事由</view>
+            <view class="th">同意</view>
+            <view class="th">拒绝</view>
+        </view>
+        <view class="tr" wx:for="{{list}}" wx:for-item="item" wx:key="{{list}}">
+            <view class="td">{{item.kq_num}}</view>
+            <view class="td">{{item.name}}</view>
+            <view class="td">{{item.reason}}</view>
+            <view class="td"> <button class="agr_btu" style="width:60rpx" id="{{item.kq_num}}+{{item.name}}+true" bindtap="handle">同意</button>  </view>
+            <view class="td"> <button class="res_btu" style="width:60rpx" id="{{item.kq_num}}+{{item.name}}+false" bindtap="handle">拒绝</button>  </view>
+        </view>
+    </view>
+</view>

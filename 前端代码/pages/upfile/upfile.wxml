@@ -1,0 +1,2 @@
+<!--pages/upfile/upfile.wxml-->
+<web-view src='http://login.kongw.work/file/hello'></web-view> 

@@ -1,0 +1,44 @@
+/* pages/bujia_info/bujia_info.wxss */
+.bujia_text{
+  font-size: 20px;
+  color: red;
+}
+
+.table{
+  border-right: 0;
+  border-bottom: 0;
+  width: 90%;
+  border: 1px solid #dadada
+  }
+  .tr{
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+  }
+  
+  .td {
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width:100%
+  }
+  
+  .th {
+  font-weight: 400;
+  background-color: #dadada
+  }
+
+  .agr_btu{			
+    height: 100rpx;		
+    font-size: 22rpx;				
+    text-align: center;
+    background-color: rgb(124, 218, 124);		
+  }
+
+  .res_btu{			
+    height: 100rpx;		
+    font-size: 22rpx;				
+    text-align: center;		
+    background-color: rgb(203, 88, 88);
+  }

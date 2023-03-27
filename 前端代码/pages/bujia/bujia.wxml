@@ -1,0 +1,22 @@
+<!--pages/bujia/bujia.wxml-->
+<form bindsubmit="bujia">
+<view class="kaoqin">
+      <input type="text" name="kaoqin__input" value="" placeholder="请输入考勤号"/>
+</view>
+
+<view class="name">
+      <input type="text" name="name__input" value="" placeholder="请输入姓名"/>
+</view>
+
+<text class="reason">事由</text>
+<textarea name="detailText" 
+    placeholder="请输入你的详细原因"
+    bindblur="bindTextAreaBlur"
+    value="{{details}}">
+</textarea>
+
+<view class="search_btu"><button form-type="submit">提交</button></view>
+</form>
+
+
+

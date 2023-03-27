@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view bindtap='gotopage'>管理员登录</view>
+
+  <form bindsubmit="search">
+  <!-- 搜索框 -->
+  <view class="weui-search-bar__box">
+      <input type="text" class="weui-search-bar__input" name="kq_num" value="" placeholder="请输入考勤号"/>
+  </view>
+  <view class="search_btu"><button form-type="submit">搜索</button></view>
+  </form>
+
+  <view class="bujia">
+  <button bindtap="gotopage1">申请补假</button>
+  </view>
+
+<view class="mes"><view bindtap='gotopage2'>考勤补假查询</view></view>
+
+</view>

@@ -1,0 +1,10 @@
+<!--pages/Statistics/Statistics.wxml-->
+<text class="title">统计结果如下:</text>
+
+<view class="th">总迟到人数：{{late_total}}</view>
+<view class="th">总旷到人数：{{noab_total}}</view>
+<view class="th">总早退人数：{{leave_total}}</view>
+<view class="th">平均迟到人数：{{late_per}}</view>
+<view class="th">平均旷到人数：{{noab_per}}</view>
+<view class="th">平均早退人数：{{leave_per}}</view>
+

@@ -1,0 +1,6 @@
+<!--pages/result/result.wxml-->
+<form bindsubmit="search">
+ <input type="text" name="kaoqin__input" value="" placeholder="请输入考勤号"/>
+ <input type="text" name="name__input" value="" placeholder="请输入姓名"/>
+<button form-type="submit">点击查询</button>
+</form>

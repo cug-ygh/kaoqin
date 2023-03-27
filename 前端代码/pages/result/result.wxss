@@ -1,0 +1,26 @@
+/* pages/result/result.wxss */
+.kaoqin {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+.kaoqin__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  text-align:center;
+}
+
+.name {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  width: 80%;
+}
+
+.name__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  text-align:center;
+}
